@@ -1,4 +1,3 @@
-<!-- compra.component.html -->
 <div>
     <h2>Calculadora de Descuentos</h2>
     <label for="precio">Precio Unitario:</label>
@@ -10,8 +9,13 @@
     <button (click)="calcularDescuento()">Calcular Descuento</button>
   
     <div *ngIf="descuento > 0">
+      <h3>Descuento Aplicado:</h3>
+      <p>{{ descuento | currency }}</p>
+    </div>
+  
+    <div *ngIf="descuento > 0">
       <h3>Total a Pagar:</h3>
-      <p>{{ precio * cantidad - descuento | currency }}</p>
+      <p>{{ totalPagar | currency }}</p>
     </div>
   </div>
   

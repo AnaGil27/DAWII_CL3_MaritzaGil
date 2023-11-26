@@ -9,6 +9,7 @@ export class AlmacenComponent {
   precio: number = 0;
   cantidad: number = 0;
   descuento: number = 0;
+  totalPagar: number = 0;
 
   calcularDescuento() {
     if (this.cantidad > 20) {
@@ -21,5 +22,8 @@ export class AlmacenComponent {
       // Sin descuento para 10 o menos artículos
       this.descuento = 0;
     }
+
+    //Lo que debe pagar el cliente
+    this.totalPagar = this.precio * this.cantidad - this.descuento;
   }
 }
