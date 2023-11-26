@@ -1,1 +1,11 @@
-<p>rick-and-morty works!</p>
+
+<div>
+    <h2>Rick and Morty - Personajes con ID impar</h2>
+    
+    <ul>
+      <li *ngFor="let character of characters">
+        {{ character.name }} (ID: {{ character.id }})
+      </li>
+    </ul>
+  </div>
+  
