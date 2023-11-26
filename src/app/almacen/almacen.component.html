@@ -1,0 +1,17 @@
+<!-- compra.component.html -->
+<div>
+    <h2>Calculadora de Descuentos</h2>
+    <label for="precio">Precio Unitario:</label>
+    <input type="number" [(ngModel)]="precio" id="precio" />
+    
+    <label for="cantidad">Cantidad:</label>
+    <input type="number" [(ngModel)]="cantidad" id="cantidad" />
+  
+    <button (click)="calcularDescuento()">Calcular Descuento</button>
+  
+    <div *ngIf="descuento > 0">
+      <h3>Total a Pagar:</h3>
+      <p>{{ precio * cantidad - descuento | currency }}</p>
+    </div>
+  </div>
+  
